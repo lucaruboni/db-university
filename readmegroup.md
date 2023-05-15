@@ -9,3 +9,8 @@
 ### fare la media dei voti di ogni appello d'esame
 
 - SELECT `exam_student`.`exam_id` AS `exam`, AVG(`exam_student`.`vote`) AS `vote_average` FROM `exam_student` GROUP BY `exam` ASC ORDER BY AVG(`exam_student`.`vote`);
+
+### contare quanti corsi di laurea ci sono per ogni dipartimento
+
+- SELECT `departments`.`name` AS `department_name`, COUNT(`degrees`.`id`) AS `degrees` FROM `degrees` JOIN `departments` ON `degrees`.`department_id` = `departments`.`id` GROUP BY `department_name`;
+
