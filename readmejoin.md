@@ -6,4 +6,6 @@
 
 - SELECT `degrees`.`level` AS `degree_level`, `departments`.`name` AS `department_level` FROM `degrees` JOIN `departments` ON `degrees`.`department_id` = `departments`.`id` WHERE `departments`.`name` = 'Dipartimento di Neuroscienze' AND `degrees`.`level` =    'magistrale';
 
-###
+### seleziona tutti i corsi di laurea tenuti dal prof fulvio amato
+
+- SELECT `courses`.`name` AS `course_name`, `teachers`.`name` AS `teacher_name`, `teachers`.`surname` AS `teacher_surname`, `teachers`.`id` AS `teacher-id` FROM `course_teacher` JOIN `courses` ON `course_teacher`.`course_id` = `courses`.`id` JOIN `teachers` ON `course_teacher`.`teacher_id` = `teachers`.`id` WHERE `teachers`.`id` = 44;
