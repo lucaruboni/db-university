@@ -14,3 +14,5 @@
 
 - SELECT `departments`.`name` AS `department_name`, COUNT(`degrees`.`id`) AS `degrees` FROM `degrees` JOIN `departments` ON `degrees`.`department_id` = `departments`.`id` GROUP BY `department_name`;
 
+
+
