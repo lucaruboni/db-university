@@ -8,7 +8,7 @@
 
 ### seleziona tutti i corsi di laurea tenuti dal prof fulvio amato
 
-- SELECT `courses`.`name` AS `course_name`, `teachers`.`name` AS `teacher_name`, `teachers`.`surname` AS `teacher_surname`, `teachers`.`id` AS `teacher-id` FROM `course_teacher` JOIN `courses` ON `course_teacher`.`course_id` = `courses`.`id` JOIN `teachers` ON `course_teacher`.`teacher_id` = `teachers`.`id` WHERE `teachers`.`id` = 44;
+-SELECT `courses`.`name` AS `course_name`, `teachers`.`name` AS `teacher_name`, `teachers`.`surname` AS `teacher_surname`, `teachers`.`id` AS `teacher-id` FROM `course_teacher` JOIN `courses` ON `course_teacher`.`course_id` = `courses`.`id` JOIN `teachers` ON `course_teacher`.`teacher_id` = `teachers`.`id` WHERE `teachers`.`name` = 'Fulvio' AND `teachers`.`surname` = 'Amato';
 
 ### seleziona tutti gli studenti e i loro dati relativi al corso di laurea e al dipartimento in ordine alfabetico del cognome
 
